@@ -1,0 +1,60 @@
+#main_head{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2em;
+	padding: 20px;
+	font-weight: 200;
+	margin-top: 30px;
+
+
+}
+#Username{
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 1em;
+	padding: 10px;
+}
+
+#form input {
+	width: 100%;
+}
+
+#Password{
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 1em;
+	padding: 10px;
+
+}
+#form{
+	align-self: center;
+	padding-left: 20%		
+	border: 0,20px;
+	background: center;
+	//background-color: white;
+
+}
+#form-container{
+	margin-top: 40px;
+	padding:20px 100px ;
+	outline-color: #4f5451;
+	//border: 1px solid black;
+	background-color: white;
+	box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+#form-container > div {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+#form-container button{
+	width: 90%;
+	//text-align: center;
+	margin: 0 10px 0 75px;
+	/*margin-left: 20px;*/
+	height: 40px;
+	align-self: center;
+	border-color: none;
+	border-radius: 5px;
+}
