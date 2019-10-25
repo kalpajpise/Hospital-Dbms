@@ -1,4 +1,5 @@
 <?php include"include/admin_header.php" ?>
+<?php include"functions.php" ?>
 
     <div id="wrapper">
 
@@ -46,7 +47,7 @@
                     
                     case 'edit_employee';
                     
-                    include "includes/edit_post.php";
+                    include "include/edit_employee.php";
                     break;
                     
                     default:
