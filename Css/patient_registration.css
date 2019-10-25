@@ -15,14 +15,12 @@
 	margin: 0px 200px;
 }
 
-.btn-primary {
+.btn {
 	width: 100%;
+	background-color: #656565;
+	
 }
 
 .form-row{
 	padding: 7px 0px;
-}
-
-.form-row  input{
-	height: 50px
 }
