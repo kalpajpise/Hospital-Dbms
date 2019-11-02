@@ -9,13 +9,13 @@
 	  </ol>
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
-	      <img src="images/slider-image1.jpg" class="d-block w-100" alt="Hospital images ">
+	      <img src=" images/maxresdefault.jpg" class="d-block w-100" alt="Hospital images " style="height: 550px">
 	    </div>
 	    <div class="carousel-item">
-	      <img src="images/slider-image2.jpg" class="d-block w-100" alt="Hospital images ">
+	      <img src="images/slider-image2.jpg" class="d-block w-100" alt="Hospital images " style="height: 550px">
 	    </div>
 	    <div class="carousel-item">
-	      <img src="images/" class="d-block w-100" alt="Hospital images " >
+	      <img src="images/h3.jpg" class="d-block w-100" alt="Hospital images " style="height: 550px">
 	    </div>
 	  </div>
 	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -80,22 +80,22 @@
 
 
 	 <div class="content-grids">
-		    	<div class="wrap">
+		    	<div class="wrap" style="margin-left: 270px">
 		    	<div class="section group">
 								
 							
-				<div class="listview_1_of_3 images_1_of_3">
+				<div class="listview_1_of_3 images_1_of_3" style="height: 147px ;">
 					<div class="listimg listimg_1_of_2">
 						  <img src="images/grid-img3.png">
 					</div>
 					<div class="text list_1_of_2">
-						  <h3>Patients</h3>
-						  <p>Register & Book Appointment</p>
-						  <div class="button"><span><a href="hms/user-login.php">Click Here</a></span></div>
+						  <h3>Receptionist Login</h3>
+				
+						  <div class="button"><span><a href="hms/user_login.php">Click Here</a></span></div>
 				    </div>
 				</div>	
 
-				<div class="listview_1_of_3 images_1_of_3">
+				<div class="listview_1_of_3 images_1_of_3" >
 					<div class="listimg listimg_1_of_2">
 						  <img src="images/grid-img1.png">
 					</div>
@@ -112,7 +112,7 @@
 						  <img src="images/grid-img2.png">
 					</div>
 					<div class="text list_1_of_2">
-						  <h3>Admin Login</h3>
+						  <h3>Adminstrator Login</h3>
 						
 						  <div class="button"><span><a href="hms/admin">Click Here</a></span></div>
 				     </div>
@@ -120,6 +120,7 @@
 			</div>
 		    </div>
 		   </div>
+
 		
 
 

@@ -28,12 +28,6 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
                         <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
                     </li>
                     <li>
@@ -48,22 +42,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fas fa-user-injured"> </i> Patient</a>
+                        <a href="./patient.php"><i class="fas fa-user-injured"> </i> Patient</a>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"> </i> Rooms</a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"> </i> Records</a>
-                    </li>
-
-                <i class="fas fa-user-injured"></i>
-
-
-
-
-                    <li class="active">
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                        <a href="./room.php"><i class="fa fa-fw fa-bar-chart-o"> </i> Rooms</a>
                     </li>
                 </ul>
             </div>
