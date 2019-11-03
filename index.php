@@ -91,7 +91,7 @@
 					<div class="text list_1_of_2">
 						  <h3>Receptionist Login</h3>
 				
-						  <div class="button"><span><a href="hms/user_login.php">Click Here</a></span></div>
+						  <div class="button"><span><a href="hms/login_recep.php">Click Here</a></span></div>
 				    </div>
 				</div>	
 
@@ -114,7 +114,7 @@
 					<div class="text list_1_of_2">
 						  <h3>Adminstrator Login</h3>
 						
-						  <div class="button"><span><a href="hms/admin">Click Here</a></span></div>
+						  <div class="button"><span><a href="hms/login_admin.php">Click Here</a></span></div>
 				     </div>
 				</div>			
 			</div>

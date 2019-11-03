@@ -1,9 +1,9 @@
-<?php include"include/admin_header.php" ?>
+<?php include"include/recep_header.php" ?>     
 
     <div id="wrapper">
 
         <!-- Navigation -->
-        <?php include 'include/admin_navigation.php';  ?>
+        <?php include 'include/recep_navigation.php';  ?>
 
         <div id="page-wrapper">
 
@@ -14,7 +14,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Welcome Receptionist
-                            <small></small>
+                            <small><?php echo $login_name ?></small>
                         </h1>
                     </div>
                 </div>
@@ -26,4 +26,4 @@
         </div>
         <!-- /#page-wrapper -->
 
-   <?php include 'include/admin_footer.php'; ?>
+   <?php include 'include/recep_footer.php'; ?>

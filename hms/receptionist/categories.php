@@ -1,4 +1,4 @@
-<?php include "include/admin_header.php" ?>
+<?php include "include/recep_header.php" ?>
     
 <?php include 'functions.php'; ?>
     <div id="wrapper">
@@ -9,7 +9,7 @@
 
         <!-- Navigation -->
  
-        <?php include "include/admin_navigation.php" ?>
+        <?php include "include/recep_navigation.php" ?>
         
         
     
@@ -84,4 +84,4 @@
      
         
         <!-- /#page-wrapper -->
-<?php include "include/admin_footer.php" ?>
+<?php include "include/recep_footer.php" ?>

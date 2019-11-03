@@ -1,4 +1,4 @@
-<?php include"admin_header.php" ?>
+<?php include"recep_header.php" ?>
 
 
 
@@ -129,4 +129,4 @@
     </tbody>
 </table>
 
-<?php include"admin_footer.php" ?>
+<?php include"recep_footer.php" ?>

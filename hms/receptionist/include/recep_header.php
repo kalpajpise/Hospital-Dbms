@@ -1,9 +1,31 @@
-<?php 
+
+ <?php 
 
     ob_start();
+   
     include '../include/config.php';
 
  ?>
+ <?php
+    session_start ();
+    if (isset($_SESSION['r_id'])) {
+        $login_user_id = $_SESSION['r_id'];
+
+        $query = "SELECT * FROM employee WHERE  e_id = $login_user_id";
+        $select_login_emp = mysqli_query($connection,$query);
+
+        if (!$select_login_emp){
+            die("NOT Query" . mysqli_error($select_login_emp));
+        }
+
+        while ($row = mysqli_fetch_assoc($select_login_emp)) {
+           $login_name = $row['e_name'];
+           $login_id = $row['e_id'];
+
+        }
+
+    }
+?>
 
 
 
