@@ -28,10 +28,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
+                        <a href="./categories.php"><i class="fa fa-list-alt" aria-hidden="true"></i> Categories</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v fas fa-user-md "></i> Employee <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-users" aria-hidden="true"></i></i> Employee <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="employee.php">Veiw Employee</a>
@@ -42,10 +42,21 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="./patient.php"><i class="fas fa-user-injured"> </i> Patient</a>
+                        <a href="./patient.php"><i class="fas fa-user-injured"></i>            Patient</a>
                     </li>
                     <li>
-                        <a href="./room.php"><i class="fa fa-fw fa-bar-chart-o"> </i> Rooms</a>
+                        <a href="./room.php"><i class="fas fa-hospital"></i> </i> Rooms</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fas fa-file-medical-alt"></i></i> Records <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo1" class="collapse">
+                            <li>
+                                <a href="./r_employee.php">Employee</a>
+                            </li>
+                            <li>
+                                <a href="./r_patient.php?source=add_doctor">Patient</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Welcome Admin
+                            Welcome Receptionist
                             <small></small>
                         </h1>
                     </div>
@@ -43,9 +43,9 @@
                     break; 
                     
                     
-                    case 'edit_patient';
+                    case 'detail_patient';
                     
-                    include "include/edit_patient.php";
+                    include "include/patient_details.php";
                     break;
                     
                     default:

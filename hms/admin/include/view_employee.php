@@ -47,7 +47,7 @@
     if (isset($_GET['delete'])) {
         $emp_id = $_GET['delete'];
 
-        $query = "DELETE FROM employee where e_id = $emp_id ";
+        $query = "UPDATE employee SET mask_del_emp = 1 where e_id = $emp_id ";
         $emplyoee_delete = mysqli_query($connection,$query);
         if (!$emplyoee_delete) {
             # code..
@@ -81,43 +81,43 @@
         $cat_title = $_POST['category'];
 
 
-        $query = "SELECT * FROM employee , categories where cat_id=c_id AND cat_title = '{$cat_title}' ORDER BY e_id DESC ";
+        $query = "SELECT * FROM employee , categories where cat_id=c_id AND cat_title = '{$cat_title}' AND mask_del_emp = 0 ORDER BY e_id DESC ";
         $select_employee = mysqli_query($connection,$query);  
 
-    while($row = mysqli_fetch_assoc($select_employee)) {
-        $emp_id            = $row['e_id'];
-        $emp_name          = $row['e_name'];
-        $emp_gender        = $row['e_gender']; 
-        $emp_email         = $row['e_email'];
-        $emp_phone         = $row['e_phone'];
-        $emp_cat           = $row['cat_title'];
-        $emp_dob           = $row['e_dob'];
-        $emp_address       = $row['e_address'];
-        $emp_salary        = $row['e_salary'];
+         while($row = mysqli_fetch_assoc($select_employee)) {
+            $emp_id            = $row['e_id'];
+            $emp_name          = $row['e_name'];
+            $emp_gender        = $row['e_gender']; 
+            $emp_email         = $row['e_email'];
+            $emp_phone         = $row['e_phone'];
+            $emp_cat           = $row['cat_title'];
+            $emp_dob           = $row['e_dob'];
+            $emp_address       = $row['e_address'];
+            $emp_salary        = $row['e_salary'];
 
 
-        echo "<tr>";
-        echo "<td>$emp_id</td>";
-        echo "<td>$emp_name</td>";
-        echo "<td>$emp_gender</td>";
-        echo "<td>$emp_email</td>";
-        echo "<td>$emp_phone</td>";;
-        echo "<td>$emp_cat</td>";   
-        echo "<td>$emp_dob</td>";
-        echo "<td>$emp_address</td>";
-        echo "<td>$emp_salary</td>";
-        echo "<td><a href='employee.php?delete={$emp_id}'>Delete</a></td>";
-        echo "<td><a href='employee.php?source=edit_employee&edit_emp={$emp_id}'>Edit</a></td>";
-        echo "</tr>";
+            echo "<tr>";
+            echo "<td>$emp_id</td>";
+            echo "<td>$emp_name</td>";
+            echo "<td>$emp_gender</td>";
+            echo "<td>$emp_email</td>";
+            echo "<td>$emp_phone</td>";;
+            echo "<td>$emp_cat</td>";   
+            echo "<td>$emp_dob</td>";
+            echo "<td>$emp_address</td>";
+            echo "<td>$emp_salary</td>";
+            echo "<td><a href='employee.php?delete={$emp_id}'>Delete</a></td>";
+            echo "<td><a href='employee.php?source=edit_employee&edit_emp={$emp_id}'>Edit</a></td>";
+            echo "</tr>";
 
-        }
+            }
 
 
 
     }
     else{
     
-            $query = "SELECT * FROM employee , categories where cat_id=c_id ORDER BY e_id DESC ";
+            $query = "SELECT * FROM employee , categories where cat_id=c_id AND mask_del_emp = 0 ORDER BY e_id DESC ";
             $select_employee = mysqli_query($connection,$query);  
 
             while($row = mysqli_fetch_assoc($select_employee)) {

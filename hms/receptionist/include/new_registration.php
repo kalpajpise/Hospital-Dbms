@@ -1,3 +1,53 @@
+<?php
+	if (isset($_POST['submit'])) {
+		$pat_fname         = escape($_POST['fname']);
+        $pat_lname         = escape($_POST['lname']);
+        $pat_name 		   = $pat_fname . " " . $pat_lname;
+        $pat_gender        = escape($_POST['gender']);
+        $pat_email         = escape($_POST['email']);
+        $pat_phone         = $_POST['phonenumber'];
+        $doc_category_id   = escape($_POST['doctor_assign']);
+        $pat_dob           =  $_POST['dob'];
+        $pat_address       = escape($_POST['addres1'].", " .$_POST['addres2'].", ");
+        $pat_address	  .= $_POST['city'].", ".$_POST['state'].", ".$_POST['country'].".";
+        $d = time();
+        $pat_admission 	   = date("d-m-Y h:i:sa", $d);
+        $room_id 		   = $_POST['room_assign'];
+        
+        $query = "INSERT INTO patient(p_name,p_gender,p_dob,p_email,p_phone,p_address,d_o_admission) ";
+             
+	    $query .= "VALUES('{$pat_name}','{$pat_gender}','{$pat_dob}','{$pat_email}','{$pat_phone}','{$pat_address}','{$pat_admission}') "; 
+	             
+	    $add_patient_query = mysqli_query($connection, $query);  
+	    confirmQuery($add_patient_query);
+
+
+	    $retrieve = "SELECT * FROM patient WHERE d_o_admission = '{$pat_admission}' ";
+	    $retrieve_patient_query = mysqli_query($connection, $retrieve);  
+	        
+	    confirmQuery($retrieve_patient_query);
+	    while ($row = mysqli_fetch_assoc($retrieve_patient_query)) {
+	    	$patient_id = $row['p_id'];
+	    }
+
+	    $consultation = "INSERT INTO consults VALUES({$doc_category_id},{$patient_id})";
+	    $consults_patient_query = mysqli_query($connection, $consultation);  
+	          
+	    confirmQuery($consults_patient_query);
+
+	    $assign_room = "INSERT INTO room_patient VALUES( $room_id , {$patient_id})";
+	    $consults_patient_query = mysqli_query($connection, $assign_room);  
+	    confirmQuery($consults_patient_query);
+
+	    $prescibe_pat = "INSERT INTO prescribtion(e_id, p_id) VALUES( {$doc_category_id} , {$patient_id})";
+	    $prescibe_patient_query = mysqli_query($connection, $prescibe_pat);  
+	    confirmQuery($prescibe_patient_query);
+	
+	}
+ 
+
+?>
+
 <h2 id="main_header">Enter the details</h2>
 	<form id="form" method="post" action="">
 		<div class="form-row">
@@ -31,28 +81,10 @@
 		     	<input type="number" class="form-control" placeholder="Phone Number" name="phonenumber">
 		      		
 		    </div>
-		    <div class="form-group col-md-3">
-		     	<!-- <label for="inputState">State</label --><!-- > -->
-		     	<select id="select-op" class="form-control" name="room_assign" >
-		     		<?php 
-		     			$query = "SELECT * FROM room";
-					    $select_categories = mysqli_query($connection,$query);
-					    while($row = mysqli_fetch_assoc($select_categories)) {
-						    $room_id = $row['r_id'];
-						    $room_name = $row['r_name'];
-						    echo "<option value='{$room_id}'>{$room_name}</option>";
-						}
-
-
-		     		 ?>
-		     		 
-		        		
-		        		
-		      	</select>
-		      </div>
 		      <div class="form-group col-md-3">
 		     	<!-- <label for="inputState">State</label --><!-- > -->
 		     	<select id="select-op" class="form-control" name="doctor_assign" >
+		     		<option value='0' selected >Select  Doctor</option>
 		     		<?php  
 		     			$query = "SELECT * FROM  categories c ,employee e where cat_title = 'Doctor' AND  c.cat_id = e.c_id";
 					    $select_doctor = mysqli_query($connection,$query);
@@ -61,6 +93,27 @@
 						    $emp_id = $row['e_id'];
 						    $doc_name = $row['e_name'];
 						    echo "<option value='{$emp_id}'>{$doc_name}</option>";
+						}
+
+
+		     		 ?>
+		     	</select>
+		 
+		      		
+		    </div>
+
+		    <div class="form-group col-md-3">
+		     	<!-- <label for="inputState">State</label --><!-- > -->
+		     	<select id="select-op" class="form-control" name="room_assign" >
+		     		<option value='0' selected >Select  Room</option>
+		     		<?php  
+		     			$query = "SELECT * FROM room ";
+					    $select_room = mysqli_query($connection,$query);
+					    confirmQuery($select_room);	
+					    while($row = mysqli_fetch_assoc($select_room)) {
+						    $room_id = $row['r_id'];
+						    $room_name = $row['r_name'];
+						    echo "<option value='{$room_id}'>{$room_name}</option>";
 						}
 
 

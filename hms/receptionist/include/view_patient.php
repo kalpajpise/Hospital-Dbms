@@ -34,44 +34,18 @@
                 </select>
           </div>
            <div class="form-group">
-              <input class="btn btn-primary" type="submit" name="room_submit" value="View Category">
+              <input class="btn btn-primary" type="submit" name="room_submit" >
           </div>
 
     </form>
 
+    
     <?php 
 
         if (isset($_GET['delete'])) {
             $pat_id = $_GET['delete'];
 
-            // $query = "DELETE FROM room_patient where p_id = {$pat_id} ";
-            // $patient_room = mysqli_query($connection,$query);
-            // if (!$patient_room) {
-            //     # code..
-            //     die("Not Deleted " . mysqli_error($patient_room));
-            // }
-
-            $query = "DELETE FROM patient where p_id = {$pat_id} ";
-            $patient_delete = mysqli_query($connection,$query);
-            if (!$patient_delete) {
-                # code..
-                die("Not Deleted " . mysqli_error($patient_delete));
-            }
-            header("Location: patient.php");
-         }
-     ?>
-
-
-
-
-
-
-    <?php 
-
-        if (isset($_GET['delete'])) {
-            $pat_id = $_GET['delete'];
-
-            $query = "DELETE FROM patient where p_id = $pat_id ";
+            $query = "UPDATE patient SET mask_del_pat = 1 where p_id = $pat_id ";
             $emplyoee_delete = mysqli_query($connection,$query);
             if (!$emplyoee_delete) {
                 # code..
@@ -100,7 +74,8 @@
       <tbody>
     <?php 
         if (isset($_POST['room_submit'])) {
-             $query = " SELECT * FROM employee e , consults c, patient p , room ro NATURAL JOIN room_patient rp where p.p_id = rp.p_id  AND e.e_id = c.e_id AND c.p_id=p.p_id AND ro.r_name = '$room_name' ORDER BY p.p_id DESC ";
+             $room_category = $_POST['room_name'];
+             $query = " SELECT * FROM employee e , consults c, patient p , room ro NATURAL JOIN room_patient rp where p.p_id = rp.p_id  AND e.e_id = c.e_id AND c.p_id=p.p_id AND r_name ='{$room_category}' AND p.mask_del_pat = 0 ORDER BY p.p_id DESC ";
             $select_patient = mysqli_query($connection,$query); 
             confirmQuery($select_patient);
 
@@ -138,7 +113,7 @@
         }
         else{
      
-                $query = "SELECT * FROM employee e , consults c, patient p , room ro NATURAL JOIN room_patient rp where p.p_id = rp.p_id  AND e.e_id = c.e_id AND c.p_id=p.p_id  ORDER BY p.p_id DESC ";
+                $query = "SELECT * FROM employee e , consults c, patient p , room ro NATURAL JOIN room_patient rp where p.p_id = rp.p_id  AND e.e_id = c.e_id AND c.p_id=p.p_id AND p.mask_del_pat = 0  ORDER BY p.p_id DESC ";
                 $select_patient = mysqli_query($connection,$query); 
                 confirmQuery($select_patient);
 
@@ -166,7 +141,7 @@
                     echo "<td>$pat_consults</td>"; 
                     echo "<td>$pat_room</td>";  
                     echo "<td><a href='patient.php?delete={$pat_id}'>Delete</a></td>";
-                    echo "<td><a href='include/patient_details.php?source=detail&edit={$pat_name}'>Details</a></td>";
+                    echo "<td><a href='patient.php?source=detail_patient&edit={$pat_name}'>Details</a></td>";
                     echo "</tr>";
 
             }

@@ -7,6 +7,6 @@
     $_SESSION['errmsg'] = null;
 
 
-    header("Location: ../../login_admin.php");
+    header("Location: ../../../index.php");
 
 ?>

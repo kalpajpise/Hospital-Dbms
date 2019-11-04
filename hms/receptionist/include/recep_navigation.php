@@ -12,7 +12,7 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo " ". $login_name; ?> <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo " ". $_SESSION[ 'login_name']; ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="profile.php"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -46,6 +46,9 @@
                     </li>
                     <li>
                         <a href="./room.php"><i class="fa fa-fw fa-bar-chart-o"> </i> Rooms</a>
+                    </li>
+                     <li>
+                        <a href="./payment.php"><i class="fa fa-fw fa-bar-chart-o"> </i>Payment</a>
                     </li>
                 </ul>
             </div>

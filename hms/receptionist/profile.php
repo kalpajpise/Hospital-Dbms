@@ -13,14 +13,14 @@
     $select_emp_by_id = mysqli_query($connection,$query);  
 
     while($row = mysqli_fetch_assoc($select_emp_by_id)) {
-       $emp_id             = $row['e_id'];
+        $emp_id            = $row['e_id'];
         $emp_name          = $row['e_name'];
         $emp_gender        = $row['e_gender']; 
         $emp_email         = $row['e_email'];
         $emp_phone         = $row['e_phone'];
         $emp_dob           = $row['e_dob'];
         $emp_address       = $row['e_address'];
-      
+        $emp_cat           = $row['c_id'];
         
          }
 

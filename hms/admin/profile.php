@@ -20,6 +20,7 @@
         $emp_phone         = $row['e_phone'];
         $emp_dob           = $row['e_dob'];
         $emp_address       = $row['e_address'];
+        $emp_cat           = $row['c_id'];
       
         
          }

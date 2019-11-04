@@ -26,7 +26,6 @@
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Incharge</th>
-                            <th scope="col">No Of Patients</th>
                         </tr>
                   </thead>
                   <tbody>
@@ -40,14 +39,14 @@
                             $room_id        = $row['r_id'];
                             $room_name      = $row['r_name'];
                             $room_incharge  = $row['e_name'];
-                            $room_patients  = $row['no_of_patient'];
+                           
 
 
                             echo "<tr>";
                             echo "<td>$room_id</td>";
                             echo "<td>$room_name</td>";
                             echo "<td>$room_incharge</td>";
-                            echo "<td>$room_patients</td>";
+                            
                             echo "</tr>";
                         }
                     ?>  

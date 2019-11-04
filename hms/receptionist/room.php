@@ -1,5 +1,12 @@
 <?php include"include/recep_header.php" ?>
 <?php include"functions.php" ?>
+<?php 
+    
+    // $query_no_of = "SELECT COUNT(DISTINCT e_id ) FROM room_patient WHERE r_id = 1 ";
+    // $result = mysqli_query($connection,$query_no_of);
+    // confirmQuery($result);
+
+ ?>
 
     <div id="wrapper">
 
@@ -14,7 +21,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Welcome Admin
+                            Welcome Receptionist
                             <small></small>
                         </h1>
                     </div>
@@ -26,7 +33,7 @@
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Incharge</th>
-                            <th scope="col">No Of Patients</th>
+                            
                         </tr>
                   </thead>
                   <tbody>
@@ -40,14 +47,13 @@
                             $room_id        = $row['r_id'];
                             $room_name      = $row['r_name'];
                             $room_incharge  = $row['e_name'];
-                            $room_patients  = $row['no_of_patient'];
 
 
                             echo "<tr>";
                             echo "<td>$room_id</td>";
                             echo "<td>$room_name</td>";
                             echo "<td>$room_incharge</td>";
-                            echo "<td>$room_patients</td>";
+                            
                             echo "</tr>";
                         }
                     ?>  

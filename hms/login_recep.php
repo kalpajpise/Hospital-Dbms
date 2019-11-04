@@ -27,7 +27,7 @@
         </div>
 
         <div class="box-login">
-          <form class="form-login" method="post" action="include/recep_login">
+          <form class="form-login" method="post" action="include/recep_login.php">
             <fieldset>
               <legend>
                 Sign in to your account

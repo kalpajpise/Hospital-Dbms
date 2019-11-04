@@ -14,7 +14,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Welcome Receptionist
-                            <small><?php echo $login_name ?></small>
+                            <small><?php echo $_SESSION['login_name'] ?></small>
                         </h1>
                     </div>
                 </div>

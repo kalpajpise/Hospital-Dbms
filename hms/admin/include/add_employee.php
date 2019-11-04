@@ -40,7 +40,7 @@
 
 
 
-
+<script type="text/javascript" src="../js/city_state.js"></script>
 <h2 id="main_header">Enter the details</h2>
 	<form id="form" method="post" action="">
 		<div class="form-row">
@@ -118,22 +118,21 @@
 		<div class="form-row">
 		    <div class="form-group col-md-4">
 		     	<!-- <label for="inputCity">City</label> -->
-		     	<select id="select-op" class="form-control" name="country" >
+		     	<select id="countries-list" class="form-control" name="country" >
 		        		<option selected>Country</option>
-		        		<option>India</option>
 		      	</select>
 		      		
 		    </div>
 		    <div class="form-group col-md-4">
 		     	<!-- <label for="inputState">State</label --><!-- > -->
-		      		<select id="select-op" class="form-control" name="state">
+		      		<select id="sates-list" class="form-control" name="state">
 		        		<option selected>State</option>
 		        		<option>Karnataka</option>
 		      		</select>
 		    </div>
 		    <div class="form-group col-md-4">
 		      	<!-- <label for="inputZip">Zip</label> -->
-		      		<select id="select-op" class="form-control" name="city" >
+		      		<select id="cities-list" class="form-control" name="city" >
 		        		<option selected>City</option>
 		        		<option>Bangalore</option>
 		      		</select>
@@ -144,3 +143,4 @@
 			</button>
 		</div>
 	</form>
+	
