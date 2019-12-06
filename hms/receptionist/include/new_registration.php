@@ -20,8 +20,6 @@
 	             
 	    $add_patient_query = mysqli_query($connection, $query);  
 	    confirmQuery($add_patient_query);
-
-
 	    $retrieve = "SELECT * FROM patient WHERE d_o_admission = '{$pat_admission}' ";
 	    $retrieve_patient_query = mysqli_query($connection, $retrieve);  
 	        
@@ -39,9 +37,15 @@
 	    $consults_patient_query = mysqli_query($connection, $assign_room);  
 	    confirmQuery($consults_patient_query);
 
-	    $prescibe_pat = "INSERT INTO prescribtion(e_id, p_id) VALUES( {$doc_category_id} , {$patient_id})";
-	    $prescibe_patient_query = mysqli_query($connection, $prescibe_pat);  
+	    // $prescibe_pat = "INSERT INTO prescribtion(e_id, p_id) VALUES( {$doc_category_id} , {$patient_id})";
+	    // $prescibe_patient_query = mysqli_query($connection, $prescibe_pat);  
+	    // confirmQuery($prescibe_patient_query);
+
+	    $prescribtion_pat = "UPDATE prescribtion SET e_id = {$doc_category_id} where p_id = {$patient_id}";
+	    $prescibe_patient_query = mysqli_query($connection, $prescribtion_pat);  
 	    confirmQuery($prescibe_patient_query);
+	    //header("Location: index.php");
+
 	
 	}
  

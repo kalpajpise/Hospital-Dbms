@@ -15,7 +15,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo " ". $_SESSION[ 'login_name']; ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="profile.php"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            <a href="profile.php"><i class="fa fa-fw fa-user"></i>Edit Profile</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
+                        <a href="./categories.php"><i class="fa fa-list-alt" aria-hidden="true"></i> Categories</a>
                     </li>
                     <li>
-                        <a href="./employee.php"><i class="fa fa-fw fa-wrench"></i>Employee</a>
+                        <a href="./employee.php"><i class="fa fa-users" aria-hidden="true"></i></i> Employee</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v fas fa-user-md "></i> Patient<i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fas fa-user-injured"></i>      Patient<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="./patient.php">Veiw Patient</a>
@@ -45,10 +45,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="./room.php"><i class="fa fa-fw fa-bar-chart-o"> </i> Rooms</a>
+                        <a href="./room.php"><i class="fas fa-hospital"></i> Rooms</a>
                     </li>
                      <li>
-                        <a href="./payment.php"><i class="fa fa-fw fa-bar-chart-o"> </i>Payment</a>
+                        <a href="./payment.php"><i class="fas fa-file-invoice"></i>  Payment</a>
                     </li>
                 </ul>
             </div>

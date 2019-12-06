@@ -103,7 +103,7 @@
                 echo "<td>$pat_consults</td>"; 
                 echo "<td>$pat_room</td>";  
                 echo "<td><a href='patient.php?delete={$pat_id}'>Delete</a></td>";
-                echo "<td><a href='include/patient_details.php?source=detail&edit={$pat_name}'>Details</a></td>";
+                echo "<td><a href='include/patient_details.php?source=detail&edit={$pat_id}'>Details</a></td>";
                 echo "</tr>";
 
              }
@@ -141,7 +141,7 @@
                     echo "<td>$pat_consults</td>"; 
                     echo "<td>$pat_room</td>";  
                     echo "<td><a href='patient.php?delete={$pat_id}'>Delete</a></td>";
-                    echo "<td><a href='patient.php?source=detail_patient&edit={$pat_name}'>Details</a></td>";
+                    echo "<td><a href='patient.php?source=detail_patient&edit={$pat_id}'>Details</a></td>";
                     echo "</tr>";
 
             }

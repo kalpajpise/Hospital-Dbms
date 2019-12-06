@@ -33,26 +33,29 @@
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Incharge</th>
+                            <th scope="col">No of Patient</th>
                             
                         </tr>
                   </thead>
                   <tbody>
                     <?php 
                         
-                        $query = "SELECT * FROM room NATURAL JOIN employee";
+                        $query = "CALL `number` ()";
                         $select_room = mysqli_query($connection,$query);
                         confirmQuery($select_room);
 
                         while ($row = mysqli_fetch_assoc($select_room)) {
-                            $room_id        = $row['r_id'];
-                            $room_name      = $row['r_name'];
-                            $room_incharge  = $row['e_name'];
+                            $room_id            = $row['r_id'];
+                            $room_name          = $row['r_name'];
+                            $room_incharge      = $row['e_name'];
+                            $room_no_of_patient = $row['No_of_Patient'];
 
 
                             echo "<tr>";
                             echo "<td>$room_id</td>";
                             echo "<td>$room_name</td>";
                             echo "<td>$room_incharge</td>";
+                            echo "<td>$room_no_of_patient</td>";
                             
                             echo "</tr>";
                         }

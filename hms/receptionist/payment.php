@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Welcome Receptionist
+                            Payment
                             <small></small>
                         </h1>
                     </div>
@@ -101,7 +101,7 @@
                      if (isset($_POST['submit_pay'])) {
 
                     
-                        $query = "UPDATE patient SET mask_del_pat = 1 where p_id = $pat_id ";
+                        $query = "UPDATE patient SET mask_del_pat = 1 , amt = 0 where p_id = $pat_id ";
                         $emplyoee_delete = mysqli_query($connection,$query);
                         if (!$emplyoee_delete) {
                             die("Not Deleted ");

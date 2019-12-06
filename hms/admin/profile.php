@@ -48,7 +48,9 @@
             $create_post_query = mysqli_query($connection, $query);  
                 
             confirmQuery($create_post_query);
+            header("Location: index.php");
            }
+
 ?>
 
     <div id="wrapper">

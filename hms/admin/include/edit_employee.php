@@ -50,7 +50,10 @@
             $create_post_query = mysqli_query($connection, $query);  
                 
             confirmQuery($create_post_query);
+            header("Location: include/view_employee.php" )
            }
+
+      // header("Location: ./index.php" )
 
 
 
@@ -90,7 +93,8 @@
           <select id="select-op" class="form-control" name="category" >
             <?php 
 
-            // $query = "SELECT * FROM employee , categories where cat_id={$the_employee_id} ORDER BY e_id DESC ";
+            // $query = "SELECT * FROM employee , categories where cat_id={$
+            //the_employee_id} ORDER BY e_id DESC ";
             // $select_employee = mysqli_query($connection,$query);  
 
             // while($row = mysqli_fetch_assoc($select_employee)) {
